@@ -10,14 +10,18 @@ import domain.User;
 public class UsersRepositoryImpl implements UsersRepository{
     private Logger logger;
 
+    public UsersRepositoryImpl(Logger logger, String location, String dbName){
+        this.logger =logger; //konstruktor
+        logger.log("Lokalizacja repozytorium " + location + "/" + dbName);
+    }
+
+
+
     public User createUser (String name){
         logger. log("Tworzenie użytkownika: " + name);
         return new User(name);
     }
 
-    public void setLogger (Logger logger){
-        this.logger = logger;
 
 
-    }
 }

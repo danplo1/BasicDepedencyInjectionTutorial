@@ -4,7 +4,7 @@
        xsi:schemaLocation="
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-   <bean id="myLogger" class="implementations.LoggerImpl"></bean>
+    <bean id="myLogger" class="implementations.LoggerImpl"></bean>
     <bean id="UsersRepository" class="implementations.UsersRepositoryImpl">
         <property name="logger" ref="myLogger"></property>
 
